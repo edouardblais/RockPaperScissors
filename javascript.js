@@ -1,3 +1,20 @@
+const btnrock = document.querySelector('#rock');
+const btnpaper = document.querySelector('#paper');
+const btnscissors = document.querySelector('#scissors');
+
+btnrock.addEventListener('click', (event) => {
+    PlayRound("rock", ComputerPlay());
+});
+
+btnpaper.addEventListener('click', (event) => {
+    PlayRound("paper", ComputerPlay());
+});
+
+btnscissors.addEventListener('click', (event) => {
+    PlayRound("scissors", ComputerPlay());
+});
+
+
 function ComputerPlay() {
     const choices = ["rock", "paper", "scissors"];
 
@@ -7,6 +24,7 @@ function ComputerPlay() {
 }
 
 function PlayRound(playerSelection, computerSelection) {
+
 
     if (playerSelection === computerSelection) {
         alert ("It's a tie!");
@@ -42,24 +60,7 @@ function game() {
     let ComputerScore = 0;
     let Ties = 0;
     
-    for (let i=0; i<5; i++) {
-        
-        let computerSelection = ComputerPlay();
 
-        let playerSelection = (prompt("Choose between rock, paper or scissors!")).toLowerCase();
-
-        result = PlayRound(playerSelection, computerSelection);
-
-        if (result === 1) {
-            YourScore++;
-        } else if (result === 2) {
-            ComputerScore++;
-        } else {
-            Ties++;
-        }
-        
-        alert (`Your score is ${YourScore}, the computer's score is ${ComputerScore} and the number of ties is ${Ties}!`);
-    }
 
     if (YourScore > ComputerScore) {
         alert ("Congrats! You won the game!");
@@ -70,5 +71,6 @@ function game() {
     }   
 }
 
-console.log(game());
+
+
 
