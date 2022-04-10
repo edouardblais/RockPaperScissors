@@ -1,0 +1,36 @@
+button {
+    color:#2F4F4F;
+    background-color: black; opacity: 0.8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    display: inline-flex;
+    padding: 10px;
+    border-color: black;
+    border: 10px;
+    font-size: 36px;
+    margin: 100px 10px;
+}
+
+.buttons, #container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: block;
+    background-color: #8FBC8F;
+    align-content: center;
+}
+
+html, body {
+    height:100%;
+}
+
+#container {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: 700;
+}
